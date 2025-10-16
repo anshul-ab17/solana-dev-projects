@@ -8,6 +8,8 @@ const COMMITMENT = (process.env.COMMITMENT as any) || "confirmed";
 const DEFAULT_AMOUNT = Number(process.env.AIRDROP_AMOUNT) || 1;
 const DEFAULT_PUBLIC_KEY = process.env.DEFAULT_PUBLIC_KEY!;
 
+
+
 export const airdrop = async (address: string = DEFAULT_PUBLIC_KEY, amount: number = DEFAULT_AMOUNT) => {
   try {
     const publicKey = new PublicKey(address);
@@ -20,7 +22,6 @@ export const airdrop = async (address: string = DEFAULT_PUBLIC_KEY, amount: numb
       amount * LAMPORTS_PER_SOL
     );
 
-    // Using the old confirmTransaction syntax
     await connection.confirmTransaction(signature, COMMITMENT);
 
     console.log(`Airdropped ${amount} SOL successfully!`);
@@ -30,4 +31,4 @@ export const airdrop = async (address: string = DEFAULT_PUBLIC_KEY, amount: numb
 };
 
 // Run
-airdrop("BkzbMFuMm9CWmQfnEZdPdS2h9fVPZAfBVy6jM22VoW1j", 1);
+airdrop("BkzbMFuMm9CWmQfnEZdPdS2h9fVPZAfBVy6jM22VoW1j", DEFAULT_AMOUNT);
