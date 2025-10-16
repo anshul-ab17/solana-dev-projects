@@ -6,11 +6,11 @@ import { Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
 const RPC_URL = process.env.RPC_URL || "http://localhost:8899";
 const COMMITMENT = (process.env.COMMITMENT as any) || "confirmed";
 const DEFAULT_AMOUNT = Number(process.env.AIRDROP_AMOUNT) || 1;
-const DEFAULT_PUBLIC_KEY = process.env.DEFAULT_PUBLIC_KEY!;
+const DEFAULT_PUBLIC_KEY = new PublicKey (process.env.DEFAULT_PUBLIC_KEY!);
 
 
 
-export const airdrop = async (address: string = DEFAULT_PUBLIC_KEY, amount: number = DEFAULT_AMOUNT) => {
+export const airdrop = async (address: PublicKey = DEFAULT_PUBLIC_KEY, amount: number = DEFAULT_AMOUNT) => {
   try {
     const publicKey = new PublicKey(address);
     const connection = new Connection(RPC_URL, COMMITMENT);

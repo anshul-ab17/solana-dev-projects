@@ -1,3 +1,10 @@
 node_modules/
 dist/
 .env
+
+# Ignore Solana local test ledger
+test-ledger/
+*.log
+*.ldb
+*.sst
+*.db
