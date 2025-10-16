@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc -b"
+    "build": "npx tsc -b",
+    "run:airdrop": "node airdrop/index.js",
+    "run:airdrop:test": "node -r dotenv/config dist/airdrop/index.js dotenv_config_path=testenv"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +14,9 @@
   "type": "commonjs",
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "dotenv": "^17.2.3"
   }
 }
