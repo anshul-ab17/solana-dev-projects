@@ -1,4 +1,4 @@
-import { Connection, Keypair, LAMPORTS_PER_SOL, PublicKey, sendAndConfirmRawTransaction, sendAndConfirmTransaction, SystemProgram, Transaction } from "@solana/web3.js";
+import { Connection, Keypair, LAMPORTS_PER_SOL, PublicKey, sendAndConfirmTransaction, SystemProgram, Transaction } from "@solana/web3.js";
 import { airdrop } from "../airdrop";
 import { showBalance } from "../showBalance";
 
@@ -32,7 +32,5 @@ const toPublicKey = new PublicKey("BkzbMFuMm9CWmQfnEZdPdS2h9fVPZAfBVy6jM22VoW1j"
     console.log(`Initial balance of from wallet: ${transferedBalance}`);
     const transferedBalanceTo = await showBalance(toPublicKey);
     console.log(`Initial balance of from wallet: ${transferedBalanceTo}`);
-
-    
 
 })()

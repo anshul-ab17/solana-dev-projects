@@ -1,7 +1,6 @@
 import {Connection, LAMPORTS_PER_SOL, PublicKey} from "@solana/web3.js"
 import { airdrop } from "../airdrop";
 
-
 export const balance = async(publicKey:PublicKey) => {
 
     const connection = new Connection("http://localhost:8899","confirmed");
@@ -26,4 +25,3 @@ export const balance = async(publicKey:PublicKey) => {
     const updatedBalance=await balance(new PublicKey(publicKey));
     console.log(`update balance : ${updatedBalance} SOL`);
 })()
-
