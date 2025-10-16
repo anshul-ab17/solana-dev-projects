@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc -b",
-    "run:airdrop": "node airdrop/index.js",
-    "run:airdrop:test": "node -r dotenv/config dist/airdrop/index.js dotenv_config_path=testenv"
+    "run:airdrop": "node dist/airdrop/index.js",
+    "run:balance": "node dist/balance/index.js",
+    "start:balance": "npx ts-node balance/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {

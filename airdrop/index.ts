@@ -30,5 +30,5 @@ export const airdrop = async (address: string = DEFAULT_PUBLIC_KEY, amount: numb
   }
 };
 
-// Run
+
 airdrop("BkzbMFuMm9CWmQfnEZdPdS2h9fVPZAfBVy6jM22VoW1j", DEFAULT_AMOUNT);
