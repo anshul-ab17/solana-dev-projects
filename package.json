@@ -6,8 +6,7 @@
   "scripts": {
     "build": "npx tsc -b",
     "run:airdrop": "node dist/airdrop/index.js",
-    "run:balance": "node dist/balance/index.js",
-    "start:balance": "npx ts-node balance/index.ts"
+    "run:balance": "node dist/balance/index.js"
   },
   "keywords": [],
   "author": "",
